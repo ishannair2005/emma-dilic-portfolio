@@ -42,15 +42,11 @@ export default function AboutPage() {
         <div>
           <div className="relative aspect-square w-full max-w-[220px] overflow-hidden bg-accent-soft">
             <MediaImage
-              src="/images/about/headshot-placeholder.svg"
-              alt="Placeholder headshot — replace with a professional photo"
-              isPlaceholder
+              src="/images/about/headshot.png"
+              alt={`${SITE_NAME}, ${SITE_ROLE.toLowerCase()}`}
               priority
             />
           </div>
-          <p className="mt-3 text-xs text-muted">
-            Placeholder — add a photo at /public/images/about/headshot.jpg
-          </p>
         </div>
 
         <div>
