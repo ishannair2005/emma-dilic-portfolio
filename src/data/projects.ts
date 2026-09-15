@@ -3,7 +3,9 @@ import type { PortfolioProject } from "./types";
 // Portfolio projects, grounded in the resume's "Work Experience," "Research,"
 // and "GIS Projects" sections. To add a new project:
 //   1. Drop images in /public/images/portfolio/<slug>/
-//   2. Add an entry below with a unique slug and an `order` for grid position.
+//   2. Record each image's real pixel width/height (used to render maps at
+//      their true aspect ratio, uncropped, on the project page).
+//   3. Add an entry below with a unique slug and an `order` for grid position.
 // Projects with `isPlaceholder: true` images have no source photography yet —
 // swap the placeholder graphic for the real map when it's available.
 
@@ -35,6 +37,8 @@ export const PROJECTS: PortfolioProject[] = [
       src: "/images/portfolio/national-geographic-editorial-maps/wakhan.png",
       alt: "Map of the Wakhan Corridor region",
       orientation: "landscape",
+      width: 3534,
+      height: 2782,
     },
     images: [
       {
@@ -42,36 +46,48 @@ export const PROJECTS: PortfolioProject[] = [
         alt: "Map of the Wakhan Corridor region",
         caption: "Wakhan Corridor route map",
         orientation: "landscape",
+        width: 3534,
+        height: 2782,
       },
       {
         src: "/images/portfolio/national-geographic-editorial-maps/nz-whales.png",
         alt: "Map of whale distribution near New Zealand",
         caption: "New Zealand whale distribution map",
         orientation: "square",
+        width: 1074,
+        height: 1092,
       },
       {
         src: "/images/portfolio/national-geographic-editorial-maps/sheep.jpg",
         alt: "Wildlife range map",
         caption: "Wildlife range and habitat map",
         orientation: "landscape",
+        width: 3300,
+        height: 2550,
       },
       {
         src: "/images/portfolio/national-geographic-editorial-maps/brazil.png",
-        alt: "Map of a region of Brazil",
-        caption: "Brazil regional map",
+        alt: "Map of Andean South America showing named sacrificial locations",
+        caption: "Andean South America locator map",
         orientation: "portrait",
+        width: 730,
+        height: 1100,
       },
       {
         src: "/images/portfolio/national-geographic-editorial-maps/antarctic-route.png",
         alt: "Map of an Antarctic expedition route",
         caption: "Antarctic expedition route map",
         orientation: "portrait",
+        width: 1012,
+        height: 1554,
       },
       {
         src: "/images/portfolio/national-geographic-editorial-maps/hurricane.jpg",
         alt: "Map tracking a hurricane's path",
         caption: "Hurricane track and impact map",
         orientation: "landscape",
+        width: 3300,
+        height: 2550,
       },
     ],
     order: 1,
@@ -99,6 +115,8 @@ export const PROJECTS: PortfolioProject[] = [
       src: "/images/portfolio/national-geographic-bookazine-atlas/bookazine.png",
       alt: "Sketch map developed for a National Geographic Bookazine atlas",
       orientation: "square",
+      width: 1154,
+      height: 1190,
     },
     images: [
       {
@@ -106,18 +124,24 @@ export const PROJECTS: PortfolioProject[] = [
         alt: "Sketch map developed for a National Geographic Bookazine atlas",
         caption: "Bookazine atlas sketch map",
         orientation: "square",
+        width: 1154,
+        height: 1190,
       },
       {
         src: "/images/portfolio/national-geographic-bookazine-atlas/cape-lookout.png",
         alt: "Map of the Cape Lookout area",
         caption: "Cape Lookout reference map",
         orientation: "portrait",
+        width: 1012,
+        height: 1555,
       },
       {
         src: "/images/portfolio/national-geographic-bookazine-atlas/kids-map.jpg",
         alt: "Illustrated map designed for a general audience",
         caption: "Illustrated general-audience map",
         orientation: "landscape",
+        width: 1920,
+        height: 1483,
       },
     ],
     order: 2,
@@ -148,6 +172,8 @@ export const PROJECTS: PortfolioProject[] = [
       src: "/images/portfolio/biogeographic-cartography-glacier-national-park/fungus-web.png",
       alt: "Map of plant family distribution in Glacier National Park, web layout",
       orientation: "landscape",
+      width: 2712,
+      height: 1800,
     },
     images: [
       {
@@ -155,12 +181,16 @@ export const PROJECTS: PortfolioProject[] = [
         alt: "Map of plant family distribution in Glacier National Park, web layout",
         caption: "Plant distribution map — web layout",
         orientation: "landscape",
+        width: 2712,
+        height: 1800,
       },
       {
         src: "/images/portfolio/biogeographic-cartography-glacier-national-park/fungus-mobile.png",
         alt: "Map of plant family distribution in Glacier National Park, mobile layout",
         caption: "Plant distribution map — mobile layout",
         orientation: "portrait",
+        width: 540,
+        height: 1804,
       },
     ],
     links: [
@@ -188,6 +218,8 @@ export const PROJECTS: PortfolioProject[] = [
       src: "/images/portfolio/cartographic-design-studies/carto-final.jpg",
       alt: "Thematic cartography study",
       orientation: "landscape",
+      width: 3600,
+      height: 2400,
     },
     images: [
       {
@@ -195,36 +227,48 @@ export const PROJECTS: PortfolioProject[] = [
         alt: "Thematic cartography study",
         caption: "Cartography course final map study",
         orientation: "landscape",
+        width: 3600,
+        height: 2400,
       },
       {
         src: "/images/portfolio/cartographic-design-studies/maine.png",
         alt: "Map of Maine",
         caption: "Maine reference map",
         orientation: "portrait",
+        width: 878,
+        height: 1410,
       },
       {
         src: "/images/portfolio/cartographic-design-studies/nws-map.jpg",
         alt: "Weather-themed map study",
         caption: "Weather-themed map study",
         orientation: "landscape",
+        width: 3300,
+        height: 2550,
       },
       {
         src: "/images/portfolio/cartographic-design-studies/phone-map.jpg",
         alt: "Mobile-oriented map study",
         caption: "Mobile-oriented map study",
         orientation: "landscape",
+        width: 3300,
+        height: 2550,
       },
       {
         src: "/images/portfolio/cartographic-design-studies/banff-springs.png",
         alt: "Map of the Banff Springs area",
         caption: "Banff Springs reference map",
         orientation: "portrait",
+        width: 886,
+        height: 1322,
       },
       {
         src: "/images/portfolio/cartographic-design-studies/firestation.png",
         alt: "Facilities and infrastructure map study",
         caption: "Facilities and infrastructure map study",
         orientation: "portrait",
+        width: 758,
+        height: 1140,
       },
     ],
     order: 4,
@@ -252,6 +296,8 @@ export const PROJECTS: PortfolioProject[] = [
       alt: "Placeholder graphic — map image forthcoming",
       isPlaceholder: true,
       orientation: "landscape",
+      width: 1600,
+      height: 1000,
     },
     images: [
       {
@@ -260,6 +306,8 @@ export const PROJECTS: PortfolioProject[] = [
         caption: "Map image forthcoming — replace with the final Botetourt County map.",
         isPlaceholder: true,
         orientation: "landscape",
+        width: 1600,
+        height: 1000,
       },
     ],
     order: 5,
@@ -290,6 +338,8 @@ export const PROJECTS: PortfolioProject[] = [
       alt: "Placeholder graphic — map image forthcoming",
       isPlaceholder: true,
       orientation: "landscape",
+      width: 1600,
+      height: 1000,
     },
     images: [
       {
@@ -298,6 +348,8 @@ export const PROJECTS: PortfolioProject[] = [
         caption: "Map image forthcoming — replace with a Safe Routes to School map.",
         isPlaceholder: true,
         orientation: "landscape",
+        width: 1600,
+        height: 1000,
       },
     ],
     order: 6,
@@ -328,6 +380,8 @@ export const PROJECTS: PortfolioProject[] = [
       alt: "Placeholder graphic — map image forthcoming",
       isPlaceholder: true,
       orientation: "landscape",
+      width: 1600,
+      height: 1000,
     },
     images: [
       {
@@ -336,6 +390,8 @@ export const PROJECTS: PortfolioProject[] = [
         caption: "Map image forthcoming — replace with a vaccine uptake map.",
         isPlaceholder: true,
         orientation: "landscape",
+        width: 1600,
+        height: 1000,
       },
     ],
     order: 7,

@@ -42,6 +42,8 @@ export const RESEARCH_ENTRIES: ResearchEntry[] = [
       src: "/images/portfolio/biogeographic-cartography-glacier-national-park/fungus-web.png",
       alt: "Map of plant family distribution in Glacier National Park",
       orientation: "landscape",
+      width: 2712,
+      height: 1800,
     },
     order: 2,
   },

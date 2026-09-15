@@ -5,8 +5,15 @@ export type ProjectImage = {
   src: string;
   alt: string;
   caption?: string;
-  /** Portrait/landscape hint used to vary the homepage grid. */
+  /** Portrait/landscape hint used only to vary the cropped homepage grid. */
   orientation?: "landscape" | "portrait" | "square";
+  /**
+   * Intrinsic pixel dimensions. Used to render the image at its true aspect
+   * ratio (no cropping) on project/research pages, so map labels and edges
+   * are never cut off — while still reserving layout space up front.
+   */
+  width: number;
+  height: number;
   /** True for generated placeholder art standing in for a missing image. */
   isPlaceholder?: boolean;
 };

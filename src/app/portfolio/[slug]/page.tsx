@@ -6,7 +6,6 @@ import { MediaImage } from "@/components/media-image";
 import { ProjectNav } from "@/components/project-nav";
 import { ExternalLinkIcon } from "@/components/icons";
 import { getAdjacentProjects, getProjectBySlug, getSortedProjects } from "@/data/projects";
-import { cn } from "@/lib/utils";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -31,12 +30,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
   };
 }
-
-const ASPECT: Record<string, string> = {
-  landscape: "aspect-[3/2]",
-  portrait: "aspect-[3/4]",
-  square: "aspect-square",
-};
 
 export default async function ProjectPage({ params }: Props) {
   const { slug } = await params;
@@ -71,18 +64,19 @@ export default async function ProjectPage({ params }: Props) {
         </dl>
       </Container>
 
-      {/* Hero image */}
+      {/* Hero image — rendered at its true aspect ratio, never cropped or
+          upscaled past its native resolution. */}
       <Container wide className="mt-4 sm:mt-8">
         <div
-          className={cn(
-            "relative w-full overflow-hidden bg-accent-soft",
-            ASPECT[project.heroImage.orientation ?? "landscape"],
-          )}
+          className="mx-auto bg-accent-soft"
+          style={{ maxWidth: project.heroImage.width }}
         >
           <MediaImage
             src={project.heroImage.src}
             alt={project.heroImage.alt}
             isPlaceholder={project.heroImage.isPlaceholder}
+            width={project.heroImage.width}
+            height={project.heroImage.height}
             priority
             sizes="(min-width: 1024px) 1200px, 100vw"
           />
@@ -134,17 +128,14 @@ export default async function ProjectPage({ params }: Props) {
           <h2 className="font-serif text-2xl text-ink">Maps &amp; Visualizations</h2>
           <div className="mt-8 space-y-14 sm:space-y-20">
             {project.images.map((image, i) => (
-              <figure key={i}>
-                <div
-                  className={cn(
-                    "relative w-full overflow-hidden bg-accent-soft",
-                    ASPECT[image.orientation ?? "landscape"],
-                  )}
-                >
+              <figure key={i} className="mx-auto" style={{ maxWidth: image.width }}>
+                <div className="bg-accent-soft">
                   <MediaImage
                     src={image.src}
                     alt={image.alt}
                     isPlaceholder={image.isPlaceholder}
+                    width={image.width}
+                    height={image.height}
                     sizes="(min-width: 1024px) 1200px, 100vw"
                   />
                 </div>

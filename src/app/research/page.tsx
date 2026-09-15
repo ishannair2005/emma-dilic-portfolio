@@ -79,8 +79,15 @@ export default function ResearchPage() {
               </div>
 
               {entry.image ? (
-                <div className="relative mt-10 aspect-[3/2] w-full overflow-hidden bg-accent-soft">
-                  <MediaImage src={entry.image.src} alt={entry.image.alt} isPlaceholder={entry.image.isPlaceholder} />
+                <div className="mt-10 max-w-2xl bg-accent-soft">
+                  <MediaImage
+                    src={entry.image.src}
+                    alt={entry.image.alt}
+                    isPlaceholder={entry.image.isPlaceholder}
+                    width={entry.image.width}
+                    height={entry.image.height}
+                    priority
+                  />
                 </div>
               ) : null}
 
