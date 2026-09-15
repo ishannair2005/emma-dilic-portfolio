@@ -98,9 +98,9 @@ portfolio project" link automatically.
 ### Where images go
 
 - Portfolio project images: `public/images/portfolio/<project-slug>/`
-- About page headshot: `public/images/about/headshot.jpg` (replace the
-  placeholder at `public/images/about/headshot-placeholder.svg` and update
-  the `src` in `src/app/about/page.tsx`)
+- About page headshot: `public/images/about/headshot.png` — to swap in a new
+  photo, replace this file (keep the filename, or update the `src` in
+  `src/app/about/page.tsx` if you rename it).
 - Generated/placeholder graphics: `public/images/placeholders/`
 
 Prefer well-compressed but high-resolution source images (long edge
@@ -131,11 +131,17 @@ resume didn't include them:
 
 - `SITE_LINKEDIN_URL` in `src/data/site.ts` — set to a real LinkedIn URL.
 - `SITE_URL` in `src/data/site.ts` — set to the production domain once purchased.
-- `public/images/about/headshot-placeholder.svg` — replace with a real photo.
-- The three portfolio projects using `map-placeholder.svg` (Botetourt,
-  Safe Routes to School, Pediatric Vaccine Uptake) — replace with real map
-  images once available.
 - `public/resume/emma-dilic-resume.pdf` — replace with the real exported PDF.
+
+Three resume-documented GIS projects (Historical Map of Botetourt County,
+FCPS Safe Routes to School, Determinants of Pediatric Vaccine Uptake) don't
+have source imagery yet, so they were left out of the portfolio gallery
+rather than shown with a placeholder graphic — they're still listed as text
+in the Resume page's GIS Projects section. Once real map images exist for
+any of them, add a new entry to `PROJECTS` in `src/data/projects.ts`
+following the pattern in [Adding a new portfolio project](#adding-a-new-portfolio-project)
+(the generic placeholder graphic at `public/images/placeholders/map-placeholder.svg`
+is still there if you want to stage a project before its images are ready).
 - A personal phone number was intentionally left out of the public site
   (spam/scraping risk on a public page). To add it back, set `SITE_PHONE` in
   `src/data/site.ts` and render it wherever needed.

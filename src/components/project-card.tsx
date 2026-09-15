@@ -1,13 +1,6 @@
 import Link from "next/link";
 import { MediaImage } from "@/components/media-image";
 import type { PortfolioProject } from "@/data/types";
-import { cn } from "@/lib/utils";
-
-const ORIENTATION_ASPECT: Record<string, string> = {
-  landscape: "aspect-[4/3]",
-  portrait: "aspect-[3/4]",
-  square: "aspect-square",
-};
 
 export function ProjectCard({
   project,
@@ -16,15 +9,15 @@ export function ProjectCard({
   project: PortfolioProject;
   priority?: boolean;
 }) {
-  const aspect = ORIENTATION_ASPECT[project.heroImage.orientation ?? "landscape"];
-
   return (
     <Link href={`/portfolio/${project.slug}`} className="group block">
-      <div className={cn("relative overflow-hidden bg-accent-soft", aspect)}>
+      <div className="overflow-hidden bg-accent-soft">
         <MediaImage
           src={project.heroImage.src}
           alt={project.heroImage.alt}
           isPlaceholder={project.heroImage.isPlaceholder}
+          width={project.heroImage.width}
+          height={project.heroImage.height}
           priority={priority}
           sizes="(min-width: 1024px) 45vw, 90vw"
           className="transition-opacity duration-500 ease-out group-hover:opacity-90"
