@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title">
+  <title id="title">Placeholder — map image forthcoming</title>
+  <rect width="1600" height="1000" fill="#f7f4ee" />
+  <g fill="none" stroke="#d8d2c2" stroke-width="2">
+    <path d="M -50 850 C 200 750, 350 950, 600 820 S 1050 700, 1300 830 S 1650 780, 1750 850" />
+    <path d="M -50 720 C 220 620, 380 820, 640 690 S 1080 560, 1330 700 S 1650 650, 1750 720" />
+    <path d="M -50 590 C 240 480, 410 690, 660 560 S 1100 430, 1340 570 S 1650 520, 1750 590" />
+    <path d="M -50 460 C 260 350, 430 560, 680 430 S 1120 300, 1350 440 S 1650 390, 1750 460" />
+    <path d="M -50 330 C 280 220, 450 430, 700 300 S 1140 170, 1360 310 S 1650 260, 1750 330" />
+  </g>
+  <rect x="1" y="1" width="1598" height="998" fill="none" stroke="#e3ded1" stroke-width="2" />
+  <g transform="translate(800,500)" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif">
+    <text y="-8" font-size="30" fill="#1b1a17">Map image forthcoming</text>
+    <text y="26" font-size="16" fill="#6f6a60" font-family="Helvetica, Arial, sans-serif" letter-spacing="1">
+      Replace this file at /public/images/placeholders/map-placeholder.svg
+    </text>
+  </g>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-labelledby="title">
+  <title id="title">Placeholder headshot — replace with a professional photo</title>
+  <rect width="600" height="600" fill="#eef1f2" />
+  <text x="300" y="330" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="160" fill="#3e5266">ED</text>
+  <text x="300" y="410" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" letter-spacing="1" fill="#6f6a60">Replace with a photo</text>
+</svg>
